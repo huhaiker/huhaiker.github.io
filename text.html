@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>点击全屏显示效果</title>
+    <meta name="description" content="Neat">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" user-scalable="no">
+    <link rel="stylesheet" href="./css/wz.css">
+
+</head>
+<body>
+
+<section class="main-group">
+    <p class="text">
+        在当天MV拍摄的现场，导演树将黑色与白色的色差运用的很好，画面感直击内心。主唱kiki一袭白裙，与数位好友一同以真实的生活状态出镜，年龄跨度从50后一直到00后，几乎涵盖了成长状态的方方面面。虽然全部演员都没有表演经验，但仍能从他们的眼神中、微笑里读出不同的感动，找到生命中无法停止的活力与希望。整个MV的脚本从人文主义的角度出发，运用简单的方式、本色的状态表达歌词中蕴含的丰富情感，用音乐铺陈出各个年龄层人成长轨迹中的多样情绪。另外，导演组更邀请到明星狗狗KeKe、Apple、将军出镜，三位“特邀演员”入戏的演出更令人感动。
+    </p>
+</section>
+</body>
+<script type="text/javascript">
+    let text = document.querySelector('.text');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+    let span = document.querySelectorAll('span');
+    for(let i=0; i<span.length; i++){
+        span[i].addEventListener("mouseover", ()=>{
+            span[i].classList.add('action');
+        })
+    }
+</script>
+</html>
